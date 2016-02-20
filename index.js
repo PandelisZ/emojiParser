@@ -14,7 +14,7 @@ var router = express.Router();
 //   console.log(compiled);
 // });
 
-compile.toSwift(1);
+//compile.toSwift(1);
 
 
 router.use(function(req, res, next){
@@ -37,13 +37,23 @@ app.post('/api/post', function(req, res){
     if (err){
       res.send('Oh f*$k');
     }
-    res.json({message: '👍'});
-    console.log(newEmoji.id);
-    console.log(newEmoji.name);
-    console.log(newEmoji.src);
-    console.log(newEmoji.swift);
-  });
+    compile.toSwift(req.body.id, function(err, data){
+      res.json([{id: data._id}]);
+    });
+    });
 
+    // emojiDb.findOne({id: req.body.id}, function (err, data) {
+    //   res.json(data);
+    // });
+
+});
+
+app.get('/api/:api_id', function(req, res){
+  emojiDb.findById(req.params.api_id, function(err, data) {
+                          if (err)
+                                  res.send(err);
+                          res.json(data);
+                  });
 });
 
 app.get('/api/list', function(req, res){
