@@ -194,6 +194,14 @@ var myEmoji = new Localize({
     "😡": {
       //dog
       "emoji": "func"
+    },
+    "🔥": {
+      //dog
+      "emoji": "if"
+    },
+    "💧": {
+      //dog
+      "emoji": "else"
     }
 
 });

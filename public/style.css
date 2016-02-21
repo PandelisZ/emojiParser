@@ -191,13 +191,13 @@
 {
 	background: #7192d4;
 	padding: 60px 0px;
-	color: white;
+	color: white !important;
 }
 .features-text
 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
-	color: white;
+	color: #fff !important;
 	letter-spacing: 5px;
 	margin-bottom:30px;
 	margin-top:30px;
