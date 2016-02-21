@@ -9,3 +9,7 @@ Make a request for a specific compiled source
 `/api/all`
 
 show all
+
+`/api/compiled`
+
+show only compiled

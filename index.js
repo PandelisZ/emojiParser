@@ -26,6 +26,12 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
+app.use(express.static('public'));
+
+app.get('/', function(req, res){
+    res.render('index.html');
+});
+
 app.post('/api/post', function(req, res){
   var newEmoji = new emojiDb();
   newEmoji.name = req.body.name;
@@ -50,7 +56,13 @@ app.get('/api/:api_id', function(req, res){
     emojiDb.find(function(err, out){
       res.json(out);
     });
-  }else {
+  }
+  else if(req.params.api_id == "compiled") {
+      emojiDb.find({compiled: true}, function(err, out){
+        res.json(out);
+      })
+  }
+  else {
   emojiDb.findById(req.params.api_id, function(err, data) {
                           if (err)
                                   res.send(err);

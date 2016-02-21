@@ -9,7 +9,8 @@ var emojiSchema = new Schema({
   swift: String,
   stdout: String,
   error: String,
-  compiled: Boolean
+  compiled: Boolean,
+  time : { type : Date, default: Date.now }
 });
 
 emojiSchema.methods.findNext = function() {
