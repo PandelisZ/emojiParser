@@ -267,6 +267,9 @@ function recodeUnicode(str){
         if (unicodeSymbols[x] == '\\u0020'){
           preTranslated.push(' ');
           x ++;
+        if (unicodeSymbols[x] =='\\u000a'){
+          preTranslated.push('\n');
+        }
         }else if(unicodeSymbols[x] != null ){
           preTranslated.push(unicodeSymbols[x] + unicodeSymbols[x+1]);
           x = x +2;
@@ -274,7 +277,7 @@ function recodeUnicode(str){
       }
 
       for(var i = 0; i < preTranslated.length; i++){
-        if (preTranslated[i] != ' '){
+        if (preTranslated[i] != ' ' && preTranslated != '\n'){
           preTranslated[i] = recodeUnicode(preTranslated[i]);
         }
       }
@@ -285,7 +288,11 @@ function recodeUnicode(str){
         try {
           if (preTranslated[i] == ' '){
             translated.push(' ');
-          }else {
+          }
+          else if (preTranslated[i] == '\n'){
+            translated.push('\n');
+          }
+          else {
             translated.push(myEmoji.translate(preTranslated[i]));
           }
         }
