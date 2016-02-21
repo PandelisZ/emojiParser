@@ -267,10 +267,9 @@ function recodeUnicode(str){
         if (unicodeSymbols[x] == '\\u0020'){
           preTranslated.push(' ');
           x ++;
-        }else if (unicodeSymbols[x] =='\\u000a'){
+        }else if(unicodeSymbols[x] =='\\u000a'){
           preTranslated.push('\n');
           x ++;
-        }
         }else if(unicodeSymbols[x] != null ){
           preTranslated.push(unicodeSymbols[x] + unicodeSymbols[x+1]);
           x = x +2;
