@@ -190,6 +190,10 @@ var myEmoji = new Localize({
     "🐶": {
       //dog
       "emoji": "var"
+    },
+    "😡": {
+      //dog
+      "emoji": "func"
     }
 
 });
