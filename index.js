@@ -7,7 +7,7 @@ mongoose.connect('mongodb://emoji:emoji@ds041821.mongolab.com:41821/emoji');
 var emojiDb = require('./app/models/emoji');
 var compile = require('./compile')
 
-var port = process.env.PORT || 8000;
+var port = process.env.PORT || 80;
 var router = express.Router();
 
 // compile.toSwift(1, function(err, compiled){
@@ -26,11 +26,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-app.use(express.static('public'));
-
-app.get('/', function(req, res){
-    res.render('index.html');
-});
+app.use('/', express.static('public'));
 
 app.post('/api/post', function(req, res){
   var newEmoji = new emojiDb();
