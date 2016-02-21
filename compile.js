@@ -269,6 +269,7 @@ function recodeUnicode(str){
           x ++;
         if (unicodeSymbols[x] =='\\u000a'){
           preTranslated.push('\n');
+          x ++;
         }
         }else if(unicodeSymbols[x] != null ){
           preTranslated.push(unicodeSymbols[x] + unicodeSymbols[x+1]);
