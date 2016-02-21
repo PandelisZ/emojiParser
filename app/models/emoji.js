@@ -4,11 +4,12 @@ var Schema = mongoose.Schema;
 
 // create a schema
 var emojiSchema = new Schema({
-  id: Number,
   name: String,
   src: String,
   swift: String,
-  stdout: String
+  stdout: String,
+  error: String,
+  compiled: Boolean
 });
 
 emojiSchema.methods.findNext = function() {

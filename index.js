@@ -28,42 +28,38 @@ app.use(bodyParser.urlencoded({
 
 app.post('/api/post', function(req, res){
   var newEmoji = new emojiDb();
-  newEmoji.id = req.body.id;
   newEmoji.name = req.body.name;
   newEmoji.src = req.body.src;
-  newEmoji.swift = req.body.swift;
+  //newEmoji.swift = req.body.swift;
 
-  newEmoji.save(function(err){
+  var workingId = '';
+
+  newEmoji.save(function(err, data){
     if (err){
       res.send('Oh f*$k');
     }
-    compile.toSwift(req.body.id, function(err, data){
-      res.json([{id: data._id}]);
+    compile.toSwift(data.id, function(err, compiledData){
+      res.json(compiledData);
     });
-    });
-
-    // emojiDb.findOne({id: req.body.id}, function (err, data) {
-    //   res.json(data);
-    // });
-
+  });
 });
 
 app.get('/api/:api_id', function(req, res){
+
+  if(req.params.api_id == "all"){
+    emojiDb.find(function(err, out){
+      res.json(out);
+    });
+  }else {
   emojiDb.findById(req.params.api_id, function(err, data) {
                           if (err)
                                   res.send(err);
                           res.json(data);
                   });
-});
-
-app.get('/api/list', function(req, res){
-  emojiDb.find(function(err, out){
-    res.json(out);
-  });
-
+  }
 });
 
 app.use('/', router);
 app.listen(port, function(){
-  console.log('\u{1f604}' + ' :' + port);
+  console.log('Running on' + ' :' + port);
 });
