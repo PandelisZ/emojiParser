@@ -15,167 +15,185 @@ var myEmoji = new Localize({
       // snowflake
       "emoji": ")"
     },
-    "\u{1F649}": {
+    "🙉": {
       // open monkey
       "emoji": "{"
     },
-    "\u{1F648}": {
+    "🙈": {
       // close monkey
       "emoji": "}"
     },
-    "\u{1F60A}": {
+    "🙂": {
       // happy face
       "emoji": "["
     },
-    "\u{1F643}": {
+    "🙃": {
       // upside down face
       "emoji": "]"
     },
-    "\u{1F603}": {
+    "😀": {
       // wide mouth happy face
       "emoji": "."
     },
-    "\u{1F60F}": {
+    "😏": {
       // side smile face
       "emoji": ","
     },
-    "\u{1F617}": {
+    "😗": {
       // kiss face open eyes
       "emoji": ":"
     },
-    "\u{1F61A}": {
+    "😙": {
       // kiss face close eyes
       "emoji": ";"
     },
-    "\u{1F611}": {
+    "😑": {
       // line mouth face
       "emoji": "="
     },
-    "\u{2764}": {
+    "❤️": {
       // red heart
       "emoji": "+"
     },
-    "\u{1F499}": {
+    "💙": {
       // blue heart
       "emoji": "-"
     },
-    "\u{1F49B}": {
+    "💛": {
       // yellow heart
       "emoji": "*"
     },
-    "\u{1F49B}": {
+    "💚": {
       // green heart
       "emoji": "/"
     },
-    "\u{1F49C}": {
+    "💜": {
       // purple heart
       "emoji": "%"
     },
-    "\u{1F914}": {
+    "🤔": {
       // pensive face
       "emoji": "?"
     },
-    "\u{1F631}": {
+    "😱": {
       // shocked face
       "emoji": "!"
     },
-    "\u{1F625}": {
+    "😥": {
       // single tear face
       "emoji": "'"
     },
-    "\u{1F62D}": {
+    "😭": {
       // double tear
       "emoji": '"'
     },
-    "\u{1F43C}": {
+    "🐼": {
       // panda
       "emoji": "->"
     },
-    "\u{1F910}": {
+    "🤐": {
       // zip face
       "emoji": "//"
     },
-    "\u{1F911}": {
+    "🤑": {
       // money mouth
       "emoji": "$"
     },
-    "\u{1F614}": {
+    "😞": {
       // sad face
       "emoji": "<"
     },
-    "\u{1F606}": {
+    "😆": {
       // happy face
       "emoji": ">"
     },
-    "\u{1F34F}": {
+    "🍏": {
       // green apple
       "emoji": "&&"
     },
-    "\u{1F34E}": {
+    "🍎": {
       // red apple
       "emoji": "||"
     },
-    "\u{1F432}": {
+    "🐉": {
       // dragon
       "emoji": "0"
     },
-    "\u{1F40D}": {
+    "🐍": {
       // snake
       "emoji": "1"
     },
-    "\u{1F410}": {
+    "🐐": {
       // goat
       "emoji": "2"
     },
-    "\u{1F40E}": {
+    "🐎": {
       // horse
       "emoji": "3"
     },
-    "\u{1F412}": {
+    "🐒": {
       // monkey
       "emoji": "4"
     },
-    "\u{1F413}": {
+    "🐓": {
       // rooster
       "emoji": "5"
     },
-    "\u{1F415}": {
+    "🐕": {
       // dog
       "emoji": "6"
     },
-    "\u{1F416}": {
+    "🐖": {
       // pig
       "emoji": "7"
     },
-    "\u{1F400}": {
+    "🐀": {
       // rat
       "emoji": "8"
     },
-    "\u{1F402}": {
+    "🐂": {
       // ox
       "emoji": "9"
     },
-    "\u{1F34A}": {
+    "🍊": {
       // tangerine
       "emoji": "int"
     },
-    "\u{1F336}": {
+    "🌶": {
       // hot pepper
       "emoji": "boolean"
     },
-    "\u{1F35D}": {
+    "🍝": {
       // spaghetti
       "emoji": "string"
     },
-    "\u{1F352}": {
+    "🍒": {
       // cherries
       "emoji": "double"
     },
-    "\u{1F368}": {
+    "🍨": {
       // ice cream
       "emoji": "float"
+    },
+    "🖨": {
+      // ice cream
+      "emoji": "print"
+    },
+    "💍": {
+      // ice cream
+      "emoji": "for"
+    },
+    "😯": {
+      // ice cream
+      "emoji": "in"
+    },
+    "🐶": {
+      //dog
+      "emoji": "var"
     }
+
 });
+
 
 myEmoji.setLocale('emoji');
 
