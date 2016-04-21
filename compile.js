@@ -161,19 +161,19 @@ var myEmoji = new Localize({
     },
     "🌶": {
       // hot pepper
-      "emoji": "boolean"
+      "emoji": "Bool"
     },
     "🍝": {
       // spaghetti
-      "emoji": "string"
+      "emoji": "String"
     },
     "🍒": {
       // cherries
-      "emoji": "double"
+      "emoji": "Double"
     },
     "🍨": {
       // ice cream
-      "emoji": "float"
+      "emoji": "Float"
     },
     "🖨": {
       // ice cream
@@ -192,16 +192,43 @@ var myEmoji = new Localize({
       "emoji": "var"
     },
     "😡": {
-      //dog
       "emoji": "func"
     },
     "🔥": {
-      //dog
       "emoji": "if"
     },
     "💧": {
-      //dog
       "emoji": "else"
+    },
+    "🐱": {
+      "emoji": "let"
+    },
+    "😇": {
+      "emoji": "true"
+    },
+    "👿": {
+      "emoji": "false"
+    },
+    "🐳": {
+      "emoji": "while"
+    },
+    "😶": {
+      "emoji": "nil"
+    },
+    "🎭": {
+      "emoji": "as"
+    },
+    "😊": {
+      "emoji": "self"
+    },
+    "🏓": {
+      "emoji": "return"
+    },
+    "💔": {
+      "emoji": "break"
+    },
+    "🏠": {
+      "emoji": "struct"
     }
 
 });
