@@ -115,6 +115,9 @@ var myEmoji = new Localize({
       // red apple
       "emoji": "||"
     },
+    "😐": {
+      "emoji": "_"
+    },
     "🐉": {
       // dragon
       "emoji": "0"
@@ -157,7 +160,7 @@ var myEmoji = new Localize({
     },
     "🍊": {
       // tangerine
-      "emoji": "int"
+      "emoji": "Int"
     },
     "🌶": {
       // hot pepper
