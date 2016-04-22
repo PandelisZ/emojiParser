@@ -22,6 +22,7 @@
     "localize": "^0.4.7",
     "mongoose": "^4.4.4",
     "replacestream": "^4.0.0",
+    "shortid": "^2.2.6",
     "strsplit": "^1.0.0"
   }
 }

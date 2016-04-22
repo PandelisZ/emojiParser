@@ -5,6 +5,7 @@ var Localize = require('localize');
 var strSplit = require('strsplit');
 var fs = require('fs');
 var exec = require('child_process').exec;
+var shortid = require('shortid');
 
 var myEmoji = new Localize({
     "☀️": {
@@ -352,7 +353,9 @@ function recodeUnicode(str){
 
       console.log(compiled);
 
-      fs.writeFile("./temp.swift", compiled, function(err) {
+      var fileid = shortid.generate()
+
+      fs.writeFile("./" + fileid + ".swift", compiled, function(err) {
           if(err) {
               return console.log(err);
           }
@@ -362,7 +365,7 @@ function recodeUnicode(str){
 
       var child;
 
-      child = exec("swift temp.swift",
+      child = exec("swift ./" + fileid +".swift",
          function (error, stdout, stderr) {
             console.log(stdout);
             if (error == null){
